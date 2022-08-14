@@ -8,4 +8,4 @@ movies search app consuming movie db api
 
 ## Getting Started 🚀
 
-[click here to see the project](https://fabio-andres.github.io/stopwatch/)
+[click here to see the project](https://fabio-andres.github.io/only-movies/index.html)
