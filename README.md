@@ -1,10 +1,10 @@
-# stopwatch
+# only movies
 
-Interactive stopwatch
+movies search app consuming movie db api
 
 ## Preview
 
-![](https://github.com/fabio-andres/stopwatch/blob/main/Captura%20de%20pantalla%202022-08-11%20233325.png?raw=true)
+![](https://github.com/fabio-andres/only-movies/blob/main/Captura%20de%20pantalla%202022-08-14%20001551.png)
 
 ## Getting Started 🚀
 
