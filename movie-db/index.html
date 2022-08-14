@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
+      <link href=" https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone" rel="stylesheet">
+      <link href=" https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+
+      <link rel="stylesheet" href="./styles/mobile.css" type="text/css" />
+      <link rel="stylesheet" href="./styles/desktop.css" type="text/css" media="(min-width: 620px)" />
+    
+    
+      <title>Movies</title>
+  </head>
+<body>
+
+      <header id="header" class="header-container">
+        <span class="header-arrow ">&lt;</span>
+        <h1 class="header-title">Only Movies<span class="material-icons-outlined">
+          movie</span>
+        </h1>
+        <h1 class="header-title header-title--categoryView ">Acción</h1>
+    
+        <form id="searchForm" class="header-searchForm">
+          <input type="text" placeholder="Buscar" />
+          <button id="searchBtn"><span class="material-icons-two-tone">
+            search</span>
+          </button>
+        </form>
+      </header>
+    
+      <section id="trendingPreview" class="trendingPreview-container">
+        <div class="trendingPreview-header">
+          <h2 class="trendingPreview-title">Tendencias</h2>
+          <button class="trendingPreview-btn">Ver más</button>
+        </div>
+    
+        <!--TENER EN CUENTA QUE HAY ESTRUCTURAS HTML DINAMICAS (html creado con js) QUE SE REPITEN EN VARIAS PAGINAS PERO CON UN ESTILO CSS DIFERENTE, osea, hay varias paginas que contiene imagenes pero unas paginas las muestran posicionadas en grillas y otras en filas POR LO TANTO SE RECOMIENDA CREAR UN CONTENEDOR HTML ESTATICO DIFERENTE PARA CONTENER LA ESTRUCTURA DINAMICA DE CADA PAGINA Y DE ESTA FORMA SELECCIONAR EN CSS DICHO CONTENEDOR ESTATICO PARA ASI APLICARLE ESTILO de grillas o filas A LA ESTRUCTURA DINAMICA, EN ESTE CASO ESTA ESTRUCTURA SE REPITE EN LAS LINEAS 38, 73, 86 Y 122
+        
+        estructura para la pagina home que muestra las peliculas en tendencia-->
+         <article class="trendingPreview-movieList">
+           <!-- estos 3 div son loading skeletons para informar al usuario de que la pagina esta cargandose. para borrar las pantallas de carga al traer contenido de una api se usa el atributo .innerHTML ="" en el codigo js -->
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <!--este codigo es la estructura de como se mostraran las imagenes de peliculas en tendencia. este codigo html es creado con js mediante la manipulacion del dom. si son 20 peliculas entonces este codigo se repite 20 veces por eso este codigo se crea dentro de un for en js el cual itera 20 veces. se recomienda primero crear el codigo con html para 1 sola imagen para asi basarnos en dicho codigo html para crear el codigo js de todas las imagenes de forma facil, por eso este codigo esta comentado porque solo se usa como guia
+          <div class="movie-container">
+                <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+                />
+          </div> -->
+        </article>
+      </section>
+    
+      <section id="categoriesPreview" class="categoriesPreview-container">
+        <h2 class="categoriesPreview-title">Categorías</h2>
+        <article class="categoriesPreview-list">
+           <!-- estos 3 div son loading skeletons para informar al usuario de que la pagina esta cargandose -->
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
+          <!-- estructura html que se usa como guia para crear el mismo codigo pero con js
+              <div class="category-container">
+                 <h3 id="id28" class="category-title">Romance</h3>
+              </div> -->
+        </article>
+      </section>
+
+<!--seccion de peliculas seleccionadas como favoritas-->
+       <section id="liked" class="liked-container">
+          <div class="liked-header">
+            <h2 class="liked-title">Películas favoritas</h2>
+         </div>
+         <article class="liked-movieList">
+        <!-- este codigo se usa como guia para crearlo con js
+          <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div> -->
+        </article>
+      </section>
+    
+      <!--estructura compartida por la pagina de peliculas buscadas, la pagina de peliculas por categoria y la pagina de peliculas en tendencia-->
+      <section id="genericList" class="genericList-container ">
+         <!-- estos 3 div son loading skeletons para informar al usuario de que la pagina esta cargandose -->
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <!-- este codigo se usa como guia para crearlo con js
+        <div class="movie-container">
+          <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div> -->
+      </section>
+    
+      <section id="movieDetail" class="movieDetail-container ">
+        <h1 class="movieDetail-title">Deadpool</h1>
+        <span class="movieDetail-score">7.6</span>
+        <p class="movieDetail-description">
+          Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.
+        </p> 
+        <article class="categories-list">
+           <!-- estos 3 div son loading skeletons para informar al usuario de que la pagina esta cargandose -->
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
+         <!--  este codigo se usa como guia para crearlo con js
+          <div class="category-container">
+            <h3 id="id28" class="category-title">Romance</h3>
+          </div>  -->
+        </article>
+    
+        <article class="relatedMovies-container">
+          <h2 class="relatedMovies-title">Películas similares</h2>
+    
+          <!--estructura para las peliculas similares en la pagina de detalles de pelicula-->
+          <div class="relatedMovies-scrollContainer">
+            <!-- estos 3 div son loading skeletons para informar al usuario de que la pagina esta cargandose -->
+              <div class="movie-container movie-container--loading"></div>
+              <div class="movie-container movie-container--loading"></div>
+              <div class="movie-container movie-container--loading"></div>
+            <!-- este codigo se usa como guia para crearlo con js
+            <div class="movie-container">
+                <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+              /> 
+            </div>  -->
+          </div>
+        </article>
+      </section>
+    
+      <footer>Hecho por Fabio Zamora</footer>
+
+ <!-- se guarda la api key de la api movie db -->
+      <script src="./src/api-key.js"></script>
+
+     <!--  se seleccionan con js los elementos html que se deseen ocultar o modificar su estilo segun la pagina donde nos ubiquemos -->
+      <script src="./src/nodes.js"></script>
+
+      <!-- se hacen las peticiones a la api y crean con js los elementos html dinamicos que se necesiten -->
+      <script src="./src/main.js"></script>
+      
+            
+      <!-- se crea la navegacion con hash -->
+      <script src="./src/nav.js"></script>
+      
+
+    </body>
+</html>

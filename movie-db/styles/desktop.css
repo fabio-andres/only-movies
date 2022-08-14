@@ -1,0 +1,71 @@
+/*se aumenta el tamaño de la barra de busqueda en la pagina home*/
+.header-searchForm input {
+    width: 600px;
+  } 
+  
+
+/*aumentar boton ver mas*/
+.trendingPreview-btn {
+    border-radius: 8px;
+    height: 32px;
+    width: 200px;
+  }
+
+  /*aumentar tamaño de las peliculas en tendencia y las peliculas favoritas de la pagina home*/
+  .trendingPreview-movieList,
+  .liked-movieList {
+    height: 341px;
+  }
+  
+.trendingPreview-movieList .movie-container,
+.liked-movieList .movie-container {
+  margin-right: 18px;
+}
+
+.trendingPreview-movieList .movie-container .movie-img,
+.liked-movieList .movie-container .movie-img {
+  height: 325px;
+  min-height: 325px;
+  max-height: 325px;
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px; 
+  } 
+
+
+  /*las categorias de peliculas de la pagina home se posicionan al inicio de la fila para que s emuestren mejor al aumentar la pantalla */
+.categoriesPreview-list, .categories-list {
+    justify-content: flex-start;
+  }
+  /*se reduce el ancho de las categorias de peliculas de la pagina home para que se muestren mejor al aumentar la pantalla*/
+  .category-container {
+    width: 25%;
+  }
+
+  
+/*se aumenta el tamaño de la flecha de retroceso*/
+.header-arrow {
+    font-size: 60px; 
+  }
+
+  /*es aumenta el ancho de las filas para que se muestren 4 imagenes de peliculas en las paginas trending movies, category movies y search movies*/
+  .genericList-container .movie-container {
+    display: inline-block;
+    width: 22.5%;
+  }
+  
+  /*el contenedor de la pagina movie detail ahora tiene el mismo ancho se su contenedor padre*/
+  .movieDetail-container {
+    width: 100%;
+  }
+
+
+
+/*el selector que oculta elementos se debe poner en cada archivo css responsive*/
+  .inactive {
+    display: none;
+  }
+  
+
+
+
